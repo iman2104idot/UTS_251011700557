@@ -1,0 +1,1267 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+/* =========================
+   1. WARNA UTAMA CINESCOPE
+========================= */
+:root {
+    --cine-bg: #0b0b0f;
+    --cine-surface: #15151c;
+    --cine-card: #1c1c25;
+    --cine-red: #e50914;
+    --cine-red-hover: #b80710;
+    --cine-white: #f5f5f5;
+    --cine-muted: #a5a5b0;
+    --cine-border: #30303a;
+}
+
+/* =========================
+   2. BODY DAN LATAR BELAKANG
+========================= */
+body {
+    background-color: var(--cine-bg) !important;
+    color: var(--cine-white);
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+}
+
+main {
+    min-height: 70vh;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--cine-white);
+    letter-spacing: -0.3px;
+}
+
+p {
+    line-height: 1.7;
+}
+
+.text-secondary {
+    color: var(--cine-muted) !important;
+}
+
+/* =========================
+   3. NAVBAR
+========================= */
+.navbar {
+    background-color: #101015 !important;
+    border-bottom: 1px solid var(--cine-border);
+}
+
+.navbar-brand {
+    color: var(--cine-white) !important;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.navbar-brand:hover {
+    color: var(--cine-red) !important;
+}
+
+.nav-link {
+    color: #d5d5dc !important;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: var(--cine-red) !important;
+}
+
+.navbar-toggler {
+    border-color: #555;
+}
+
+.navbar-toggler-icon {
+    filter: invert(1);
+}
+
+/* =========================
+   4. KARTU KONTEN DAN FILM
+========================= */
+.card {
+    background-color: var(--cine-card);
+    color: var(--cine-white);
+    border: 1px solid var(--cine-border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    border-color: #55505a;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+}
+
+.card .card-title {
+    color: var(--cine-white);
+}
+
+.card .card-text {
+    color: #d0d0d8;
+}
+
+.card-img-top {
+    object-fit: cover;
+}
+
+/* =========================
+   5. TOMBOL
+========================= */
+.btn-danger {
+    background-color: var(--cine-red);
+    border-color: var(--cine-red);
+    color: #fff;
+    font-weight: 600;
+}
+
+.btn-danger:hover,
+.btn-danger:focus {
+    background-color: var(--cine-red-hover);
+    border-color: var(--cine-red-hover);
+    color: #fff;
+}
+
+.btn-outline-secondary {
+    color: #dedee5;
+    border-color: #555563;
+}
+
+.btn-outline-secondary:hover {
+    background-color: #30303a;
+    border-color: #777;
+    color: #fff;
+}
+
+/* =========================
+   6. FORM PENCARIAN
+========================= */
+.form-control {
+    background-color: #101015;
+    border-color: #41414d;
+    color: var(--cine-white);
+}
+
+.form-control:focus {
+    background-color: #15151c;
+    border-color: var(--cine-red);
+    color: var(--cine-white);
+    box-shadow: 0 0 0 0.2rem rgba(229, 9, 20, 0.2);
+}
+
+.form-control::placeholder {
+    color: #898995;
+}
+
+.form-control:focus::placeholder {
+    color: #aaa;
+}
+
+/* =========================
+   7. BADGE
+========================= */
+.badge.bg-danger {
+    background-color: var(--cine-red) !important;
+}
+
+/* =========================
+   8. PAGINATION
+========================= */
+.pagination {
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.pagination .page-link {
+    background-color: var(--cine-surface);
+    border-color: var(--cine-border);
+    color: var(--cine-white);
+    border-radius: 6px;
+}
+
+.pagination .page-link:hover {
+    background-color: var(--cine-red);
+    border-color: var(--cine-red);
+    color: #fff;
+}
+
+.pagination .active .page-link {
+    background-color: var(--cine-red);
+    border-color: var(--cine-red);
+    color: #fff;
+}
+
+.pagination .disabled .page-link {
+    background-color: #101015;
+    color: #666;
+    border-color: var(--cine-border);
+}
+
+/* =========================
+   9. ALERT
+========================= */
+.alert-warning {
+    background-color: #332b16;
+    border-color: #665222;
+    color: #ffe6a0;
+}
+
+/* =========================
+   10. FOOTER
+========================= */
+footer {
+    background-color: #101015 !important;
+    color: var(--cine-muted);
+    border-top: 1px solid var(--cine-border);
+}
+
+footer p {
+    margin-bottom: 0;
+}
+
+/* =========================
+   11. HERO BERANDA
+========================= */
+.cine-hero {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(229, 9, 20, 0.2),
+            transparent 40%
+        ),
+        linear-gradient(135deg, #17171f, #0b0b0f);
+    border: 1px solid var(--cine-border);
+    border-radius: 18px;
+    padding: 60px 40px;
+}
+
+.cine-hero p {
+    color: #c5c5cf;
+}
+
+/* =========================
+   12. RESPONSIVE
+========================= */
+@media (max-width: 576px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .cine-hero {
+        padding: 35px 22px;
+    }
+
+    .card {
+        border-radius: 10px;
+    }
+}
+
+
+html,
+body {
+    background-color: #0b0b0f !important;
+    color: #f5f5f5 !important;
+}
+
+/* Area konten utama */
+main,
+.container,
+.container-fluid {
+    color: #f5f5f5;
+}
+
+/* Paksa background putih dan abu-abu menjadi gelap */
+.bg-white,
+.bg-light {
+    background-color: #15151c !important;
+    color: #f5f5f5 !important;
+}
+
+/* Bagian pembungkus konten */
+section,
+article {
+    color: #f5f5f5;
+}
+
+/* Judul dan teks */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.text-dark {
+    color: #f5f5f5 !important;
+}
+
+/* Kartu dan panel */
+.card,
+.card-body,
+.card-header,
+.card-footer {
+    background-color: #1c1c25 !important;
+    color: #f5f5f5 !important;
+}
+
+/* Panel detail film */
+.list-group-item {
+    background-color: #1c1c25 !important;
+    color: #f5f5f5 !important;
+    border-color: #30303a !important;
+}
+
+/* Form pencarian */
+.form-control {
+    background-color: #15151c !important;
+    color: #f5f5f5 !important;
+    border-color: #41414d !important;
+}
+
+/* Teks sekunder */
+.text-secondary,
+.text-muted {
+    color: #a5a5b0 !important;
+}
+
+/* ===== HALAMAN GENRE CINESCOPE ===== */
+
+.genre-header {
+    margin-bottom: 35px;
+    padding: 25px 0 10px;
+}
+
+.genre-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    color: #e50914;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.genre-heading {
+    margin-bottom: 15px;
+    color: #f5f5f5;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 800;
+}
+
+.genre-heading span {
+    color: #e50914;
+}
+
+.genre-description {
+    max-width: 600px;
+    margin-bottom: 0;
+    color: #a5a5b0;
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+.genre-link {
+    display: block;
+    height: 100%;
+    color: inherit;
+    text-decoration: none;
+}
+
+.genre-card {
+    position: relative;
+    overflow: hidden;
+    padding: 28px 20px;
+    background: #15151c;
+    border: 1px solid #30303a;
+    border-radius: 14px;
+    transition: transform 0.25s ease, border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.genre-card::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: #e50914;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.25s ease;
+}
+
+.genre-card:hover {
+    transform: translateY(-6px);
+    border-color: #e50914;
+    box-shadow: 0 12px 28px rgba(229, 9, 20, 0.12);
+}
+
+.genre-card:hover::before {
+    transform: scaleX(1);
+}
+
+.genre-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 20px;
+    background: rgba(229, 9, 20, 0.12);
+    border: 1px solid rgba(229, 9, 20, 0.2);
+    border-radius: 14px;
+    font-size: 1.7rem;
+}
+
+.genre-card-title {
+    margin-bottom: 18px;
+    color: #f5f5f5;
+    font-size: 1.1rem;
+    font-weight: 700;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.genre-explore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #a5a5b0;
+    font-size: 0.85rem;
+    transition: color 0.25s ease;
+}
+
+.genre-explore span {
+    color: #e50914;
+    font-size: 1.1rem;
+    transition: transform 0.25s ease;
+}
+
+.genre-card:hover .genre-explore {
+    color: #f5f5f5;
+}
+
+.genre-card:hover .genre-explore span {
+    transform: translateX(4px);
+}
+
+.genre-empty {
+    padding: 45px 20px;
+    background: #15151c;
+    border: 1px solid #30303a;
+    border-radius: 14px;
+    text-align: center;
+}
+
+.genre-empty-icon {
+    margin-bottom: 15px;
+    font-size: 2.5rem;
+}
+
+.genre-empty h5 {
+    color: #f5f5f5;
+    font-weight: 700;
+}
+
+.genre-empty p {
+    margin-bottom: 0;
+    color: #a5a5b0;
+}
+
+@media (max-width: 576px) {
+    .genre-header {
+        padding-top: 15px;
+    }
+
+    .genre-card {
+        padding: 24px 12px;
+    }
+
+    .genre-card-title {
+        font-size: 1rem;
+    }
+}
+
+/* ===== DAFTAR FILM PER GENRE ===== */
+
+.genre-movies-header {
+    margin-bottom: 35px;
+}
+
+.genre-back-link {
+    display: inline-block;
+    margin-bottom: 28px;
+    color: #e50914;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.genre-back-link:hover {
+    color: #ff424b;
+}
+
+.genre-movies-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.genre-total-badge {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 115px;
+    padding: 18px;
+    background: #15151c;
+    border: 1px solid #30303a;
+    border-radius: 12px;
+}
+
+.genre-total-badge span {
+    color: #e50914;
+    font-size: 1.8rem;
+    font-weight: 800;
+}
+
+.genre-total-badge small {
+    color: #a5a5b0;
+    font-size: 0.75rem;
+}
+
+.genre-movie-card {
+    overflow: hidden;
+    background: #15151c;
+    border: 1px solid #30303a;
+    border-radius: 14px;
+    transition: transform 0.25s ease, border-color 0.25s ease,
+                box-shadow 0.25s ease;
+}
+
+.genre-movie-card:hover {
+    transform: translateY(-6px);
+    border-color: #e50914;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.3);
+}
+
+.genre-movie-poster {
+    position: relative;
+    overflow: hidden;
+    height: 320px;
+    background: #0b0b0f;
+}
+
+.genre-movie-poster img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.genre-movie-card:hover .genre-movie-poster img {
+    transform: scale(1.04);
+}
+
+.genre-movie-year {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    padding: 6px 10px;
+    color: #fff;
+    background: rgba(15, 15, 20, 0.9);
+    border: 1px solid #454550;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.genre-movie-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 220px;
+    padding: 22px;
+}
+
+.genre-movie-category {
+    align-self: flex-start;
+    margin-bottom: 12px;
+    padding: 5px 10px;
+    color: #ff525a;
+    background: rgba(229, 9, 20, 0.12);
+    border-radius: 5px;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.genre-movie-title {
+    margin-bottom: 12px;
+    color: #f5f5f5;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+
+.genre-movie-duration {
+    margin-bottom: 22px;
+    color: #a5a5b0;
+    font-size: 0.9rem;
+}
+
+.genre-movie-button {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding: 11px 15px;
+    color: #f5f5f5;
+    background: #e50914;
+    border: 1px solid #e50914;
+    border-radius: 7px;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.genre-movie-button:hover {
+    color: #fff;
+    background: #b80710;
+    border-color: #b80710;
+}
+
+.genre-movie-button span {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 576px) {
+    .genre-movies-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .genre-total-badge {
+        flex-direction: row;
+        gap: 10px;
+        min-width: auto;
+        padding: 10px 15px;
+    }
+
+    .genre-total-badge span {
+        font-size: 1.3rem;
+    }
+
+    .genre-movie-poster {
+        height: 280px;
+    }
+
+    .genre-movie-body {
+        min-height: 200px;
+        padding: 18px;
+    }
+}
+
+/* ===== HALAMAN TENTANG CINESCOPE ===== */
+
+.about-hero {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+    align-items: center;
+    gap: 35px;
+    overflow: hidden;
+    padding: 55px 45px;
+    background: linear-gradient(135deg, #17171f, #0b0b0f);
+    border: 1px solid #30303a;
+    border-radius: 20px;
+}
+
+.about-hero::after {
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 300px;
+    height: 300px;
+    background: rgba(229, 9, 20, 0.08);
+    border-radius: 50%;
+    content: "";
+    pointer-events: none;
+}
+
+.about-hero-content {
+    position: relative;
+    z-index: 1;
+}
+
+.about-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: #e50914;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.about-title {
+    margin-bottom: 15px;
+    color: #f5f5f5;
+    font-size: clamp(2rem, 5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.about-title span,
+.about-section-heading h2 span {
+    color: #e50914;
+}
+
+.about-tagline {
+    margin-bottom: 18px;
+    color: #fff;
+    font-size: 1.15rem;
+    font-weight: 600;
+}
+
+.about-description {
+    max-width: 560px;
+    margin-bottom: 25px;
+    color: #a5a5b0;
+    font-size: 0.98rem;
+    line-height: 1.9;
+}
+
+.about-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    padding: 13px 20px;
+    color: #fff;
+    background: #e50914;
+    border: 1px solid #e50914;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.about-button:hover {
+    color: #fff;
+    background: #b80710;
+    border-color: #b80710;
+    transform: translateY(-2px);
+}
+
+.about-button span {
+    font-size: 1.2rem;
+}
+
+.about-hero-visual {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 260px;
+    background: rgba(255, 255, 255, 0.025);
+    border: 1px solid #30303a;
+    border-radius: 18px;
+}
+
+.about-film-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 125px;
+    height: 125px;
+    margin-bottom: 20px;
+    background: rgba(229, 9, 20, 0.12);
+    border: 1px solid rgba(229, 9, 20, 0.35);
+    border-radius: 30px;
+    font-size: 4rem;
+}
+
+.about-visual-text {
+    color: #a5a5b0;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.about-section {
+    margin-top: 55px;
+}
+
+.about-section-heading {
+    margin-bottom: 25px;
+}
+
+.about-section-heading h2 {
+    color: #f5f5f5;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+}
+
+.about-info-card {
+    padding: 30px;
+    background: #15151c;
+    border: 1px solid #30303a;
+    border-radius: 14px;
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.about-info-card:hover {
+    transform: translateY(-5px);
+    border-color: #e50914;
+}
+
+.about-info-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 55px;
+    height: 55px;
+    margin-bottom: 22px;
+    background: rgba(229, 9, 20, 0.12);
+    border-radius: 12px;
+    font-size: 1.7rem;
+}
+
+.about-info-card h4 {
+    margin-bottom: 15px;
+    color: #f5f5f5;
+    font-size: 1.15rem;
+    font-weight: 700;
+}
+
+.about-info-card p {
+    margin-bottom: 0;
+    color: #a5a5b0;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+.about-bottom {
+    margin-top: 55px;
+    padding: 45px 25px;
+    background: #15151c;
+    border: 1px solid #30303a;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.about-bottom h2 {
+    margin-bottom: 15px;
+    color: #f5f5f5;
+    font-size: clamp(1.6rem, 3vw, 2.2rem);
+    font-weight: 800;
+}
+
+.about-bottom p {
+    max-width: 600px;
+    margin: 0 auto 25px;
+    color: #a5a5b0;
+    line-height: 1.8;
+}
+
+@media (max-width: 767px) {
+    .about-hero {
+        grid-template-columns: 1fr;
+        padding: 30px 22px;
+    }
+
+    .about-hero-visual {
+        min-height: 220px;
+    }
+
+    .about-film-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 3rem;
+    }
+
+    .about-info-card {
+        padding: 24px;
+    }
+
+    .about-section,
+    .about-bottom {
+        margin-top: 35px;
+    }
+}
+
+/* ===== NAVBAR CINESCOPE ===== */
+
+.cine-body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    margin: 0;
+    color: #f5f5f5;
+    background: #0b0b0f;
+}
+
+.cine-navbar {
+    background: rgba(15, 15, 20, 0.97);
+    border-bottom: 1px solid #30303a;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cine-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #f5f5f5 !important;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+}
+
+.cine-brand > span:last-child {
+    color: #e50914;
+}
+
+.cine-brand-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 34px;
+    height: 34px;
+    padding-left: 2px;
+    color: #fff;
+    background: #e50914;
+    border-radius: 9px;
+    font-size: 0.85rem;
+}
+
+.cine-nav-link {
+    position: relative;
+    margin: 0 3px;
+    padding: 12px 13px !important;
+    color: #b7b7c2 !important;
+    font-size: 0.92rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.cine-nav-link::after {
+    position: absolute;
+    right: 13px;
+    bottom: 5px;
+    left: 13px;
+    height: 2px;
+    background: #e50914;
+    content: "";
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease;
+}
+
+.cine-nav-link:hover,
+.cine-nav-link.active {
+    color: #fff !important;
+}
+
+.cine-nav-link:hover::after,
+.cine-nav-link.active::after {
+    transform: scaleX(1);
+}
+
+.cine-toggler {
+    border-color: #454550;
+}
+
+.cine-toggler:focus {
+    box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.2);
+}
+
+.cine-main {
+    width: 100%;
+    flex: 1 0 auto;
+}
+
+@media (max-width: 991px) {
+    .cine-navbar .navbar-collapse {
+        padding: 12px 0 8px;
+    }
+
+    .cine-nav-link {
+        margin: 2px 0;
+        padding: 11px 12px !important;
+        border-radius: 6px;
+    }
+
+    .cine-nav-link.active {
+        background: rgba(229, 9, 20, 0.1);
+    }
+
+    .cine-nav-link::after {
+        display: none;
+    }
+}
+
+/* ===== FOOTER CINESCOPE ===== */
+
+.cine-footer {
+    margin-top: auto;
+    background: #101015;
+    border-top: 1px solid #30303a;
+}
+
+.cine-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    color: #f5f5f5;
+    font-size: 1.6rem;
+    font-weight: 800;
+    text-decoration: none;
+}
+
+.cine-footer-brand > span:last-child {
+    color: #e50914;
+}
+
+.cine-footer-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    padding-left: 2px;
+    color: #fff;
+    background: #e50914;
+    border-radius: 9px;
+    font-size: 0.85rem;
+}
+
+.cine-footer-description {
+    max-width: 390px;
+    color: #a5a5b0;
+    font-size: 0.9rem;
+    line-height: 1.9;
+}
+
+.cine-footer-heading {
+    margin-bottom: 20px;
+    color: #f5f5f5;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.cine-footer-links {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.cine-footer-links li {
+    margin-bottom: 12px;
+}
+
+.cine-footer-links a {
+    color: #a5a5b0;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.cine-footer-links a:hover {
+    color: #e50914;
+}
+
+/* FOOTER BAWAH RATA TENGAH */
+
+.cine-footer-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 22px 0;
+    border-top: 1px solid #30303a;
+    color: #a5a5b0;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+.cine-footer-bottom p {
+    margin: 0;
+}
+
+.cine-footer-bottom span {
+    color: #e50914;
+    font-weight: 700;
+}
+
+.cine-footer-tagline {
+    color: #777783;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 576px) {
+    .cine-footer-bottom {
+        align-items: center;
+        text-align: center;
+    }
+}
+
+/* Kartu film */
+.movie-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #1c1c24;
+    border: 1px solid #30303a;
+    border-radius: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(229, 9, 20, 0.15);
+}
+
+/* Poster film dengan ukuran seragam */
+.movie-card img {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Isi kartu */
+.movie-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+/* Judul film */
+.movie-card-title {
+    min-height: 48px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 12px;
+}
+
+/* Informasi film */
+.movie-card-info {
+    margin-bottom: 12px;
+}
+
+/* Tombol selalu di bagian bawah */
+.movie-card .btn-detail {
+    margin-top: auto;
+    width: 100%;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #e50914;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+    text-align: center;
+}
+
+.movie-card .btn-detail:hover {
+    background-color: #b80710;
+}
+
+/* Tampilan laptop dengan layar lebih kecil */
+@media (max-width: 991px) {
+    .movie-card img {
+        height: 300px;
+    }
+}
+
+/* Tampilan HP */
+@media (max-width: 576px) {
+    .movie-card img {
+        height: 260px;
+    }
+}
+
+/* Memberikan jarak antara poster dan informasi film */
+.movie-card-body {
+    padding: 24px;
+}
+
+/* Jarak informasi tahun dari poster */
+.movie-card-body .movie-year {
+    margin-top: 12px;
+}
+
+/* Jarak genre dari tahun */
+.movie-card-body .movie-genre {
+    margin-top: 12px;
+}
+
+/* Jarak judul dari genre */
+.movie-card-title {
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+/* Jarak durasi dari judul */
+.movie-card-info {
+    margin-top: 4px;
+    margin-bottom: 20px;
+}
+
+/* Poster film */
+.movie-poster-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Badge tahun film */
+.movie-year-badge {
+    position: static;
+    display: inline-block;
+    align-self: flex-start;
+    width: fit-content;
+    padding: 6px 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    background-color: #e50914;
+    color: #fff;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+/* Jarak informasi dari poster */
+.movie-card .card-body {
+    padding: 24px !important;
+}
+
+/* Genre film */
+.movie-genre {
+    display: inline-block;
+    margin-top: 4px;
+    margin-bottom: 10px !important;
+}
+
+/* Judul film */
+.movie-card .card-title {
+    line-height: 1.5;
+    margin-bottom: 16px !important;
+}
